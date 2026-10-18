@@ -1,1 +1,265 @@
 
+/*reset*/
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Base & Surfaces */
+    --app-background: #0b0d12;
+    --surface-panel: #11151c;
+    --stroke-color: #1e2633;
+
+    /* Theme Brand */
+    --brand-neon: #00ff66;
+    --brand-glow: rgba(0, 255, 102, 0.4);
+    --brand-faded: rgba(0, 255, 102, 0.1);
+
+    /* Typography */
+    --font-primary: #ffffff;
+    --font-secondary: #64748b;
+
+    /* Status & Alerts */
+    --status-danger: #ff2a5f;
+    --danger-bg: rgb(39, 17, 27);
+    --status-warning: #ffb700;
+    --warning-bg: rgb(66, 52, 22);
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--app-background);
+    color: var(--font-primary);
+    font-family: system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding: 3vh 10vw;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--brand-neon);
+    padding: 1vh 0;
+
+    /*in case it`s in mobile */
+    position: sticky;
+    top: 0;
+    z-index: 100;    
+    background-color: var(--app-background);
+    flex-wrap: nowrap;
+}
+
+.logo-container {
+
+}
+
+.logo-icon{
+    background-color: var(--brand-neon);
+    border-radius: 50%;
+    padding: 5px;    
+    width: 3vw;
+    min-width: 35px;
+    aspect-ratio: 1;
+}
+
+.app-title{
+    font-size: 0.9rem;
+    font-weight: 650;
+    letter-spacing: 0.2em;
+}
+
+.status-container{
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+    border: 1px solid var(--brand-neon);
+    border-radius: 20px;
+    padding: 0.5em 1em ;
+}
+
+.status-dot{
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: var(--brand-neon);
+}
+
+.status-text{
+    font-size: 0.8rem;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2vh;
+}
+
+.radar-stats-wrapper{
+    background-color: var(--surface-panel);
+    border: 1px solid var(--stroke-color);
+    border-radius: 7px;
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*the code of the radar after my changes*/
+.radar {
+  position: relative;
+  overflow: hidden; 
+  width: 15vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid var(--brand-neon);
+  background: 
+    linear-gradient(transparent 49.75%, var(--brand-glow) 0 50.25%, transparent 0) 50% no-repeat,
+    linear-gradient(90deg, transparent 49.75%, var(--brand-glow) 0 50.25%, transparent 0) 50% no-repeat;
+}
+
+/**************************************************/
+.sweep {
+  position: absolute;
+  top: 0; left: 0;
+  box-sizing: border-box;
+  border-right: solid 1px hsla(145, 50%, 40%, .3);
+  width: 50%; height: 50%;
+  border-radius: 100% 0 0 0;
+  transform-origin: 100% 100%;
+  background: linear-gradient(50deg, rgba(34, 34, 34, 0) 56%, var(--brand-neon));
+  animation: sweep 5s infinite linear;
+}
+@keyframes sweep { to { transform: rotate(360deg); } }
+
+.stats-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 80%;
+    width: 50%;
+}
+
+.stat-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number{
+    color: var(--brand-neon);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.stat-label{
+    color: var(--font-secondary);
+}
+
+.action-buttons{
+    display: flex;
+    gap: 13px;
+    padding: 7px;
+}
+
+.action-btn{
+    color:var(--font-primary) ;
+    background-color: var(--surface-panel);
+    border: 1px solid var(--stroke-color);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 10px;
+}
+
+.btn-icon{
+    color: var(--font-primary);
+    filter: invert(1);
+}
+
+.btn-text{
+    font-size: 1rem;
+}
+
+.cards-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.intel-card{
+    width: 2vw;
+    height: 2vh;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width:20vw;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.priority-critical{
+    background-color: var(--stroke-color);
+    border: 1px solid var(--status-danger);
+    border-radius: 7px;
+    padding: 3px;
+    color: var(--status-danger);
+    font-size: 0.5rem;
+}
+
+.status{
+    font-size: 0.5rem;
+    color: var(--font-secondary);
+}
+
+.card-title{
+    font-size: 0.7rem;
+    color: white;
+}
+
+.progress-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home Page</title>
+</head>
+<body class="dashboard-layout">
+    
+    <!-- Main Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/icons/shield.svg" alt="shield icon" class="logo-icon">
+        </div>
 
+        <h1 class="app-title">SIGINT OPS</h1>
+
+        <!-- System Status Indicator -->
+        <div class="status-container">
+            <span class="status-dot"></span>
+            <span class="status-text">SECURE &bull; ONLINE</span>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Content -->
+    <main class="main-content">
+        
+        <!-- Top Section: Radar and Statistics -->
+        <section class="overview-section">
+            <div class="radar-stats-wrapper">
+                <!-- Radar Display -->
+                <div class="radar">
+                    <div class="sweep"></div>
+                    <!-- הוספת הנקודות שמופיעות ברדאר -->
+                    <div class="blip blip-1"></div>
+                    <div class="blip blip-2"></div>
+                    <div class="blip blip-3"></div>
+                </div>
+                <!-- Signal Stats -->
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">ACTIVE SIGNALS</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">07</span>
+                        <span class="stat-label">PRIORITY ALERTS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Section: Actions, Intelligence Cards, and Alerts -->
+        <section class="operations-section">
+            
+            <!-- Quick Action Buttons -->
+            <div class="action-buttons">
+                <button type="button" class="action-btn">
+                    <img src="images/icons/zap.svg" alt="zap icon" class="btn-icon">
+                    <span class="btn-text">New Brief</span>
+                </button>
+                <button type="button" class="action-btn">
+                    <img src="images/icons/code.svg" alt="code icon" class="btn-icon">
+                    <span class="btn-text">Decode</span>                    
+                </button>
+                <button type="button" class="action-btn">
+                    <img src="images/icons/rocket.svg" alt="rocket icon" class="btn-icon">
+                    <span class="btn-text">Request Drone</span>                    
+                </button>
+            </div>
+
+            <!-- Intelligence Briefing Cards -->
+            <div class="cards-container">
+                
+                <!-- Operation Nightfall Card (Critical) -->
+                <article class="intel-card">
+                    <div class="card-header">
+                        <span class="priority-critical">CRITICAL</span>
+                        <span class="status">In Progress</span>
+                    </div>
+                    <h2 class="card-title">Operation Nightfall</h2>
+                    <div class="progress-section">
+                        <div class="progress-track">
+                            <div class="progress-fill critical-fill" style="width: 65%;"></div>
+                        </div>
+                        <span class="progress-percentage">65%</span>
+                    </div>
+                </article>
+
+                <!-- Signal Intercept Alpha Card (High) -->
+                <article class="intel-card">
+                    <div class="card-header">
+                        <span class="priority high">HIGH</span>
+                        <span class="status">Analyzing</span>
+                    </div>
+                    <h2 class="card-title">Signal Intercept Alpha</h2>
+                    <div class="progress-section">
+                        <div class="progress-track">
+                            <div class="progress-fill high-fill" style="width: 40%;"></div>
+                        </div>
+                        <span class="progress-percentage">40%</span>
+                    </div>
+                </article>
+
+                <!-- Asset Recovery Card (Medium) -->
+                <article class="intel-card">
+                    <div class="card-header">
+                        <span class="priority medium">MEDIUM</span>
+                        <span class="status">Pending</span>
+                    </div>
+                    <h2 class="card-title">Asset Recovery</h2>
+                    <div class="progress-section">
+                        <div class="progress-track">
+                            <div class="progress-fill medium-fill" style="width: 15%;"></div>
+                        </div>
+                        <span class="progress-percentage">15%</span>
+                    </div>
+                </article>
+
+                <!-- Cyber Defence Grid Card (High) -->
+                <article class="intel-card">
+                    <div class="card-header">
+                        <span class="priority high">HIGH</span>
+                        <span class="status">Active</span>
+                    </div>
+                    <h2 class="card-title">Cyber Defence Grid</h2>
+                    <div class="progress-section">
+                        <div class="progress-track">
+                            <div class="progress-fill high-fill" style="width: 80%;"></div>
+                        </div>
+                        <span class="progress-percentage">80%</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Global Threat Alert Banner -->
+            <button type="button" class="threat-alert">
+                <span class="threat-icon"></span>
+                <span class="threat-text">THREAT DETECTED</span>
+            </button>            
+        </section>
+    </main>
+
+    <!-- Bottom Navigation Footer -->
+    <footer class="footer">
+        <nav class="bottom-nav">
+            <a href="" class="nav-item">
+                <img src="images/icons/activity.svg" alt="zag icon" class="nav-icon">
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="" class="nav-item">
+                <img src="images/icons/radio.svg" alt="zag icon" class="nav-icon">
+                <span class="nav-text">Feed</span>
+            </a>
+            <a href="" class="nav-item">
+                <img src="images/icons/file-text.svg" alt="file icon" class="nav-icon">
+                <span class="nav-text">Brief</span>
+            </a>
+        </nav>
+        <button class="help-button" type="button">
+            <img src="images/icons/help.png" alt="help-icon" class="help-icon-img">
+        </button>
+    </footer>   
+</body>
+</html>
