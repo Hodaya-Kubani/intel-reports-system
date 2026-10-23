@@ -30,6 +30,7 @@
 
 body{
     min-height: 100vh;
+    /* min-height: 100dvh; */
     background-color: var(--app-background);
     color: var(--font-primary);
     font-family: system-ui, sans-serif;
@@ -55,10 +56,6 @@ body{
     flex-wrap: nowrap;
 }
 
-.logo-container {
-
-}
-
 .logo-icon{
     background-color: var(--brand-neon);
     border-radius: 50%;
@@ -66,6 +63,12 @@ body{
     width: 2.1rem;
     min-width: 35px;
     aspect-ratio: 1;
+    transition: all 0.3s ease;
+}
+
+.logo-icon:hover{
+    box-shadow: 0 0 20px var(--brand-neon);
+    rotate: calc(180deg);
 }
 
 .app-title{
@@ -88,6 +91,16 @@ body{
     height: 0.5em;
     border-radius: 50%;
     background-color: var(--brand-neon);
+    animation: shift-color 1.5s infinite;
+}
+
+@keyframes shift-color {
+  0% {
+    background-color: var(--brand-neon);
+  }
+  100% {
+    background-color: var(--brand-glow);
+  }
 }
 
 .status-text{
@@ -109,6 +122,11 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease;
+}
+
+.radar-stats-wrapper:hover{
+    border: 1px solid var(--brand-neon);
 }
 
 /*the code of the radar after my changes*/
@@ -148,6 +166,8 @@ body{
     aspect-ratio: 1;
     z-index: 10;
     position: absolute;
+    box-shadow: 0 0 10px var(--brand-neon);
+    animation: pulse-and-change 2s ease infinite;
 }
 
 /*Points location*/
@@ -159,6 +179,17 @@ body{
 }
 .blip-3{
     top: 65%; left: 67%;
+}
+
+@keyframes pulse-and-change {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
 }
 
 .stats-container{
